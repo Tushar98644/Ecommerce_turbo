@@ -1,5 +1,4 @@
 import { useSession, signIn, signOut } from "next-auth/react"
-import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, PromiseLikeOfReactNode } from "react"
 import Navbar from "./Navbar"
 
 const Layout = ({children}) => {
