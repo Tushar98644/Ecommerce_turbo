@@ -3,12 +3,12 @@ name: Code Formatting
 on:
   push:
     branches:
-      - main # Replace "main" with the name of your default branch if it's different
+      - develop
   pull_request:
     types:
-      - closed
+      - opened
     branches:
-      - main # Replace "main" with the name of your default branch if it's different
+      - main
 
 jobs:
   format_code:
