@@ -32,7 +32,7 @@ jobs:
         run: pnpm install
 
       - name: Format code
-        run: pnpm run format # Replace "format" with the script in your package.json that formats your code
+        run: pnpm run format 
 
       - name: Commit formatted code
         run: |
