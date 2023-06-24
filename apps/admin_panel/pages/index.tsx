@@ -1,4 +1,6 @@
 import { signIn, signOut, useSession } from "next-auth/react";
+// import {Navabar} from "ui";
+import { Navbar } from "@/components";
 
 const Home_page = () => {
   const { data: session } = useSession();
@@ -13,9 +15,11 @@ const Home_page = () => {
   }
 
   return (
-    <div className="text-5xl">
-      logged in as {session?.user?.email}
-      <button onClick={() => signOut()}>sign out</button>
+    <div className="min-h-screen bg-blue-900 flex flex-row w-full">
+      <Navbar />
+      <div className="flex flex-1">
+        <button onClick={() => signOut()}>sign out</button>
+      </div>
     </div>
   );
 }
