@@ -16,8 +16,8 @@ const Home_page = () => {
 
   return (
     <div className="min-h-screen bg-blue-900 flex flex-row w-full">
-      <Navbar />
-      <div className="flex flex-1">
+        <Navbar />
+      <div className="flex flex-1 bg-white rounded-lg p-4 m-2 justify-center">
         <button onClick={() => signOut()}>sign out</button>
       </div>
     </div>
