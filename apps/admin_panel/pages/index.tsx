@@ -4,9 +4,10 @@ const Home_page = () => {
   const { data: session } = useSession();
   if (!session) {
     return (
-      <div className="text-5xl text-black">
-        not logged in
-        <button onClick={() => signIn('google')}>sign <input type="text" /></button>
+      <div className="min-h-screen bg-blue-600 flex justify-center items-center">
+        <div className="bg-white text-black p-4 rounded-xl pr-12 pl-12 text-lg font-regular border">
+          <button onClick={() => signIn('google')}>Login with Google</button>
+        </div>
       </div>
     );
   }
