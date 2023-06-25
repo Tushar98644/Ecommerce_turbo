@@ -1,11 +1,9 @@
 import { Layout } from "@/components";
 
-
 const Home_page = () => {
      return (
-
         <Layout>
-            layout 
+           <h1>layout</h1> 
         </Layout>
     );
 }
