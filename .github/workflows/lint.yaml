@@ -1,45 +1,45 @@
-name: Code Formatting
+# name: Code Formatting
 
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    types:
-      - opened
-    branches:
-      - main
+# on:
+#   push:
+#     branches:
+#       - main
+#   pull_request:
+#     types:
+#       - opened
+#     branches:
+#       - main
 
-jobs:
-  format_code:
-    if: github.event_name != 'pull_request' || github.event.pull_request.merged == true
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v2
-        with:
-          token : ${{ secrets.GITHUB_TOKEN }}
+# jobs:
+#   format_code:
+#     if: github.event_name != 'pull_request' || github.event.pull_request.merged == true
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Check out repository
+#         uses: actions/checkout@v2
+#         with:
+#           token : ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 18
+#       - name: Set up Node.js
+#         uses: actions/setup-node@v2
+#         with:
+#           node-version: 18
 
-      - name: Install pnpm
-        run: curl -f https://get.pnpm.io/v6.14.js | node - add --global pnpm
+#       - name: Install pnpm
+#         run: curl -f https://get.pnpm.io/v6.14.js | node - add --global pnpm
 
-      - name: Install dependencies
-        run: pnpm install -frozen-lockfile
+#       - name: Install dependencies
+#         run: pnpm install -frozen-lockfile
 
-      - name: Format code
-        run: pnpm run format 
+#       - name: Format code
+#         run: pnpm run format 
 
-      - name: Commit formatted code
-        run: |
-          git diff --exit-code || (
-            git config --global user.name 'GitHub Action'
-            git config --global user.email 'github-action@users.noreply.github.com'
-            git add .
-            git commit -m "Format code"
-            git push
-          )
+#       - name: Commit formatted code
+#         run: |
+#           git diff --exit-code || (
+#             git config --global user.name 'GitHub Action'
+#             git config --global user.email 'github-action@users.noreply.github.com'
+#             git add .
+#             git commit -m "Format code"
+#             git push
+#           )

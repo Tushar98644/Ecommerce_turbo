@@ -5,6 +5,12 @@ import { NextApiResponse, NextApiRequest } from "next";
 const NewProduct = async (req: NextApiRequest, res: NextApiResponse) => {
     const { method } = req;
     await mongooseconnect();
+
+    if (method === "GET") {
+        res.json(await Product.find());
+        console.log(await Product.find());
+    }
+
     if (method === "POST") {
         const { title, price, description } = req.body;
         const NewProduct = await Product.create({
