@@ -2,3 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+.btn-primary,.btn-dark-primary{
+    @apply p-4 rounded-[2vw] pr-12 pl-12 text-white;
+}
+
+.btn-primary{
+    @apply bg-blue-500 hover:bg-blue-600;
+}
+
+.btn-dark-primary{
+    @apply bg-blue-900 hover:bg-blue-500 ;
+}
+
+
+input,textarea{
+    @apply border-2 border-gray-300 rounded-[0.5vw] p-4 w-full mb-8;
+    display: block;
+}
