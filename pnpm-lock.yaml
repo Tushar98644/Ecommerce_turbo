@@ -67,6 +67,16 @@ importers:
       typescript:
         specifier: 5.1.3
         version: 5.1.3
+      ui:
+        specifier: workspace:*
+        version: link:../../packages/ui
+    devDependencies:
+      eslint-config-custom:
+        specifier: workspace:*
+        version: link:../../packages/eslint-config-custom
+      tsconfig:
+        specifier: workspace:*
+        version: link:../../packages/tsconfig
 
   packages/eslint-config-custom:
     dependencies:
