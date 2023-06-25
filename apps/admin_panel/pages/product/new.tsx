@@ -22,7 +22,7 @@ const New_Product = () => {
                 <textarea id="description" placeholder="description"  value={description} onChange={(e)=>setDescription(e.target.value)}></textarea>
                 <h1 className="text-blue-900 text-xl pb-4">Price(in USD)</h1>
                 <input type="number" placeholder="enter a price" value={price} onChange={(e)=>setPrice(e.target.value)}/>
-                <div className="items-center flex justify-center">
+                <div className="flex justify-center">
                     <button className="btn-dark-primary" type="submit">Save</button>
                 </div>
             </form>

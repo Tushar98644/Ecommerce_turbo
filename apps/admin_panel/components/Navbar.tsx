@@ -6,6 +6,7 @@ const Navbar = () => {
     const activelink = inactivelink + " bg-white text-black p-1 pr-8 rounded-[0.5vw]";
     const router = useRouter();
     const { pathname } = router;
+    // destructure pathname from router object
     return (
         <div className="flex flex-col p-2 text-white gap-8 lg:p-10 ">
             <div className="flex gap-2 text-xl items-center pl-4">
